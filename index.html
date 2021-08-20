@@ -17,18 +17,20 @@
       <p class="logo">
         <img src="0.png" height="30" width="30"></img></p>
         <ul class="nav_links">
-           <li><a href="#">Home</a></li>
-           <li><a href="#">About</a></li>
-           <li><a href="#">Projects</a></li>
-           <li><a href="#">Contact</a></li>
+           <li><a href="javascript:explorePage('main');">Home</a></li>
+           <li><a href="javascript:explorePage('about');">About</a></li>
+           <li><a href="javascript:announce('This feature is not implemented yet.', 'Page.NotImplementedException');">Projects</a></li>
+           <li><a href="javascript:explorePage('contactUs');">Contact</a></li>
            <li><a href="javascript:callAnnouncement()">Latest announce</a></li>
         </ul>
       </header>
-      <h1>Hello World</h1>
-      <br>
-      <hr>
-      <br>
-      <b>Hello, duckin' world!</b>
+      <div id="displayPage">
+        <h1>Hello World</h1>
+        <br>
+        <hr>
+        <br>
+        <b>Hello, duckin' world!</b>
+      </div>
       <script src="announce.js"></script>
       <script>
         onload = function(){
@@ -37,6 +39,14 @@
         }
         function callAnnouncement(){
           createAnnounce("This site is created!", "Latest announcement");
+        }
+        function explorePage(embedPath){
+          history.pushState(location.protocol + "//" + location.host + "/" + embedPath, null)
+          fetch(location.protocol + "//" + location.host + "/embeds/" + embedPath).then(function(whatDid){
+            whatDid.text().then(function(stringHTML){
+              displayPage.innerHTML = stringHTML;
+            })
+          })
         }
       </script>
   </body>
