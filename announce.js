@@ -3,5 +3,5 @@ document.head.insertAdjacentHTML("beforeend", "<style>.banner { background:black
 //Announce function
 function createAnnounce(message = "Missing String", title = "Announcement"){
   var codeID = Math.random().toString().replace(".", "");
-  document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1>" + title + " <button onclick=\"document.getElementByID('"+codeID+"').remove()\">X</button></h1><br>" + message + "</div>")
+  document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + title + " <button onclick=\"document.getElementById('"+codeID+"').remove()\">X</button></h1><br><label style=\"color:white\">" + message + "</label></div>")
 }
