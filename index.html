@@ -22,6 +22,7 @@
            <li><a href="#">Projects</a></li>
            <li><a href="#">Carriers</a></li>
            <li><a href="#">Contact</a></li>
+           <li><a href="javascript:callAnnouncement()">Latest announce</a></li>
         </ul>
       </header>
       <h1>Hello World</h1>
@@ -34,6 +35,9 @@
         onload = function(){
           onload = null;
           createAnnounce("This site is created!");
+        }
+        function callAnnouncement(){
+          createAnnounce("This site is created!", "Latest announcement");
         }
       </script>
   </body>
