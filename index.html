@@ -42,7 +42,7 @@
         }
         function explorePage(embedPath){
           displayPage.innerHTML = "Please wait, page is loading."
-          history.pushState(location.protocol + "//" + location.host + "/" + embedPath + ".html", null)
+          history.pushState(null, "PC's Site", location.protocol + "//" + location.host + "/" + embedPath + ".html", null)
           fetch(location.protocol + "//" + location.host + "/embeds/" + embedPath + ".html").then(function(whatDid){
             whatDid.text().then(function(stringHTML){
               displayPage.innerHTML = stringHTML;
