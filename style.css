@@ -3,3 +3,34 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+
+li, a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a3a3a;
+    padding: 30px 10%;
+
+}
+
+#logo {
+    color: white;
+    cursor: default;
+    font-size: 25px;
+}
+
+.nav_links li {
+    display: inline-block;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
