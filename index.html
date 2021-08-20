@@ -41,8 +41,9 @@
           createAnnounce("This site is created!", "Latest announcement");
         }
         function explorePage(embedPath){
-          history.pushState(location.protocol + "//" + location.host + "/" + embedPath, null)
-          fetch(location.protocol + "//" + location.host + "/embeds/" + embedPath).then(function(whatDid){
+          displayPage.innerHTML = "Please wait, page is loading."
+          history.pushState(location.protocol + "//" + location.host + "/" + embedPath + ".html", null)
+          fetch(location.protocol + "//" + location.host + "/embeds/" + embedPath + ".html").then(function(whatDid){
             whatDid.text().then(function(stringHTML){
               displayPage.innerHTML = stringHTML;
             })
