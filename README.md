@@ -1,5 +1,5 @@
 # PC's Website
-This is PC's Website hosted on github [Site](http://site.pcprojects.tk)
+This is PC's Website hosted on github [Site](https://site.pcprojects.tk)
 
 **CSS by: [@Copy05](https://github.com/Copy05)**
 
