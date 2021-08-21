@@ -4,7 +4,7 @@ document.head.insertAdjacentHTML("beforeend", "<style>.banner { background:black
 function createAnnounce(message = "Missing String", title = "Announcement", hidex = false){
   var codeID = Math.random().toString().replace(".", "");
   if (!hidex) document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + title + " <button onclick=\"document.getElementById('"+codeID+"').remove()\">x</button></h1><br><label style=\"color:white\">" + message + "</label></div>");
-  if (!hidex) document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + title + " <button disabled title=\"Seems like a multichoice, you need to choose any setting to continue.\">x</button></h1><br><label style=\"color:white\">" + message + "</label></div>");
+  if (hidex) document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + title + " <button disabled title=\"Seems like a multichoice, you need to choose any setting to continue.\">x</button></h1><br><label style=\"color:white\">" + message + "</label></div>");
   return {
     closeNotif: function(){
       if (document.getElementById(codeID)){
