@@ -38,8 +38,8 @@ function createAnnounce(message = "Missing String", title = "Announcement", hide
       }
     },
     refreshDialog: function(){
-      if (hideStore) document.getElementById(codeID).innerHTML = "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + storeTitle + " <button disabled title=\"Seems like a multichoice, you need to choose any setting to continue.\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label></div>";
-      if (!hideStore) document.getElementById(codeID).innerHTML = "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + storeTitle + " <button onclick=\"document.getElementById('"+codeID+"').remove()\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label></div>";
+      if (hideStore) document.getElementById(codeID).innerHTML = "<h1 style=\"color:white\">" + storeTitle + " <button disabled title=\"Seems like a multichoice, you need to choose any setting to continue.\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label>";
+      if (!hideStore) document.getElementById(codeID).innerHTML = "<h1 style=\"color:white\">" + storeTitle + " <button onclick=\"document.getElementById('"+codeID+"').remove()\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label>";
       return "Dialog settings refreshed";
     },
     setTitle: function(argtitle = "Announcement"){
