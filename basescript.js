@@ -1,4 +1,5 @@
 //Original announce script
+var announceInstances = {};
 document.head.insertAdjacentHTML("beforeend", "<style>.banner { background:black; color: white; text-align: center; height: " + screen.height + "px; width: " + screen.width + "px; opacity: 50%; top: 0; right: 0; position: fixed; }");
 function createAnnounce(message = "Missing String", title = "Announcement", hidex = false) {
     var codeID = Math.random().toString().replace(".", "");
@@ -7,7 +8,7 @@ function createAnnounce(message = "Missing String", title = "Announcement", hide
     var hideStore = hidex;
     if (!hidex) document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + storeTitle + " <button onclick=\"document.getElementById('" + codeID + "').remove()\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label></div>");
     if (hidex) document.body.insertAdjacentHTML("beforeend", "<div class=\"banner\" id=\"" + codeID + "\"><h1 style=\"color:white\">" + storeTitle + " <button disabled title=\"Seems like a multichoice, you need to choose any setting to continue.\">x</button></h1><br><label style=\"color:white\">" + storeMessage + "</label></div>");
-    return {
+    var allSettings = {
         closeNotif: function() {
             if (document.getElementById(codeID)) {
                 document.getElementById(codeID).remove();
@@ -62,8 +63,18 @@ function createAnnounce(message = "Missing String", title = "Announcement", hide
             } else {
                 return "This dialog is already closed.";
             }
+        },
+        id: codeID,
+        get closed(){
+            if (document.getElementById(codeID)) {
+                return false;
+            }else{
+                return true;
+            }
         }
-    }
+    };
+    announceInstances[codeID] = allSettings;
+    return allSettings;
 }
 //Original Basescript
 onload = function() {
