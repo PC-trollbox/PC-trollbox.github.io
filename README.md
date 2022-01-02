@@ -1,7 +1,7 @@
 # PC's Website
 This is PC's Website hosted on github 
 
-Demos: [Site1 (Domain)](https://site.pcprojects.tk), [Site2 (Fallback, github original one)](https://site.pcprojects.tk/)
+Demos: [Site1](https://pc-trollbox.github.io/)
 
 **CSS by: [@Copy05](https://github.com/Copy05)**
 
@@ -11,5 +11,5 @@ Demos: [Site1 (Domain)](https://site.pcprojects.tk), [Site2 (Fallback, github or
 
 # The Primary owner discontinued The site
 
-PC-Trollbox The primary owner has discontinued this site, The Continued Development is gonna be made by:
+PC-Trollbox THIS SITE WAS DEADED, The Continued Development is gonna be made by:
 [@Copy05](https://github.com/Copy05) 
