@@ -79,11 +79,11 @@ function createAnnounce(message = "Missing String", title = "Announcement", hide
 //Original Basescript
 onload = function() {
     onload = null;
-    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"javascript:alert('nocommit')\">GitHub commit</a>.");
+    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"https://github.com/PC-trollbox/PC-trollbox.github.io/commit/d27e89de0ccf89306eac9bbcd008b05201453368\">GitHub commit</a>.");
 }
 
 function callAnnouncement() {
-    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"javascript:alert('nocommit')\">GitHub commit</a>.", "Latest announcement");
+    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"https://github.com/PC-trollbox/PC-trollbox.github.io/commit/d27e89de0ccf89306eac9bbcd008b05201453368\">GitHub commit</a>.", "Latest announcement");
 }
 
 function explorePage(embedPath) {
