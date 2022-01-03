@@ -79,15 +79,11 @@ function createAnnounce(message = "Missing String", title = "Announcement", hide
 //Original Basescript
 onload = function() {
     onload = null;
-    if (!localStorage.getItem("accepted")) {
-        createAnnounce("This site uses cookies. We don't steal any data from you and will not do this.<br><button onclick=\"this.parentElement.parentElement.remove();localStorage.setItem('accepted','1');location.reload();\">Accept</button><button onclick=\"document.body.innerHTML='User didn\\'t accept the cookie policy. Restart page if you changed your mind.'\">Not accept</button>", "Cookies! Nom nom.", true);
-    } else {
-        createAnnounce("Created cookie notice for newcomers.");
-    }
+    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"javascript:alert('nocommit')\">GitHub commit</a>.");
 }
 
 function callAnnouncement() {
-    createAnnounce("Created cookie notice for newcomers.", "Latest announcement");
+    createAnnounce("Removed cookie notice.<br>Log of discussion about the cookie notice can be found in the <a href=\"javascript:alert('nocommit')\">GitHub commit</a>.", "Latest announcement");
 }
 
 function explorePage(embedPath) {
